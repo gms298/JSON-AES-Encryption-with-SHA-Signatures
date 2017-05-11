@@ -4,12 +4,12 @@ var ursa = require('ursa');
 var msg, sig, enc, rcv, tosend, received_msg, network_JSON;
 
 // Server has it's private and Client's public key
-var privkeyServer = ursa.createPrivateKey(fs.readFileSync('./server/privkey.pem'));
-var pubkeyClient = ursa.createPublicKey(fs.readFileSync('./client/pubkey.pem'));
+var privkeyServer = ursa.createPrivateKey(fs.readFileSync('./server/privatekey.pem'));
+var pubkeyClient = ursa.createPublicKey(fs.readFileSync('./client/publickey.pem'));
 
 // Client has it's private and Server's public key
-var privkeyClient = ursa.createPrivateKey(fs.readFileSync('./client/privkey.pem'));
-var pubkeyServer = ursa.createPublicKey(fs.readFileSync('./server/pubkey.pem'));
+var privkeyClient = ursa.createPrivateKey(fs.readFileSync('./client/privatekey.pem'));
+var pubkeyServer = ursa.createPublicKey(fs.readFileSync('./server/publickey.pem'));
 
 // SENDER's Side
 // =========================================================
