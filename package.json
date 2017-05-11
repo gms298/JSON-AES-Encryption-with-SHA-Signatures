@@ -1,0 +1,23 @@
+{
+  "name": "json-encryption-decryption-with-SHA256-signatures",
+  "version": "1.0.0",
+  "description": "Safely encrypting a JSON object to be transported over the Internet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gms298/JSON-Encryption-with-SHA-Signatures.git"
+  },
+  "author": "Manoj Sharan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gms298/JSON-Encryption-with-SHA-Signatures/issues"
+  },
+  "homepage": "https://github.com/gms298/JSON-Encryption-with-SHA-Signatures#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "ursa": "^0.9.4"
+  }
+}
