@@ -1,7 +1,7 @@
 'use strict';
 var fs = require('fs');
 var ursa = require('ursa');
-var msg, sig, enc, rcv, tosend, reeceived_msg, network_JSON;
+var msg, sig, enc, rcv, tosend, received_msg, network_JSON;
 
 // Server has it's private and Client's public key
 var privkeyServer = ursa.createPrivateKey(fs.readFileSync('./server/privkey.pem'));
@@ -52,10 +52,10 @@ else {
   // Valid signature, proceed to decrypting
   console.log('Decrypt with clients Private key...');
   rcv = privkeyClient.decrypt(network_JSON.enc, 'base64', 'utf8');
-  reeceived_msg = JSON.parse(rcv);
+  received_msg = JSON.parse(rcv);
   
   // Print MSG part of the received JSON
-  console.log('\nDecrypted message: ', reeceived_msg.TEST.MSG, '\n');
+  console.log('\nDecrypted message: ', received_msg.TEST.MSG, '\n');
 
 }
 
